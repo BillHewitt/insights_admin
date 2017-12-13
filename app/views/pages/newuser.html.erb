@@ -1,0 +1,87 @@
+<%-# Header starts -%>
+<div class="row">
+	<div class="col-12">
+			<nav aria-label="breadcrumb" role="navigation">
+			  <ol class="breadcrumb">
+			  	<li class="breadcrumb-item"><%= link_to "Users", pages_users_path %></li>
+			    <li class="breadcrumb-item active" aria-current="page">Invite new user</li>
+			  </ol>
+			</nav>
+	</div>
+</div>
+<%-# Header ends -%>
+
+<%-# Separator -%>
+
+<div class="row">
+	<div class="col-12">
+		<hr>
+	</div>
+</div>
+
+<%-# Stats -%>
+
+<form class="form" action="#">
+		<div class="form-group row">
+			<label class="col-md-3 col-form-label">First name</label>
+			<div class="col-md-9">
+				<input type="text" name="regular" class="form-control" placeholder="First name">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-3 col-form-label">Last name</label>
+			<div class="col-md-9">
+				<input type="text" name="regular" class="form-control" placeholder="Last name">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-3 col-form-label">Email</label>
+			<div class="col-md-9">
+				<input type="text" name="regular" class="form-control" placeholder="Email address">
+			</div>
+		</div>
+		<div class="form-group row">
+			
+
+		</div>
+		<div class="form-group row">
+			<label class="col-md-3 col-form-label">Role</label>
+			<div class="col-md-9">
+				<select class="custom-select form-control">
+					<option selected="">Admin</option>
+					<option value="1">Team Lead</option>
+					<option value="2">Employee</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-3 col-form-label">Team</label>
+			<div class="col-md-9">
+				<select class="custom-select form-control">
+					<option selected="">Perkbox</option>
+					<option value="1">Account management</option>
+					<option value="2">Product &amp; Engineering</option>
+					<option value="2">London</option>
+					<option value="2">Sheffield</option>
+				</select>
+			</div>
+		</div>
+		<div class="float-right space">
+			<a class="ul-link js-add-user-box" href="#">Add another user</a>
+			<span> or </span>
+			<a class="ul-link" href="#">Invite several people at once</a>
+		</div>
+
+	<section class="row">
+		<br>
+		<div class="col-md-6">
+		</div>
+		<div class="col-md-6">
+			<div class="float-right">
+				<button type="button" class="btn btn-md btn-warning">Invite new user</button>
+			</div>
+		</div>
+	</section>
+</form>
+
+

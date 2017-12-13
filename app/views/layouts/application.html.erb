@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Insights Admin Prototype</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <% if current_page?(pages_compare_path) %>
+    	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <% end %>
+    <% if current_page?(pages_engagement_path) %>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.js"></script>
+    <% end %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+  </head>
+
+  <body>
+  	<%= render "layouts/nav" %>
+  		<div class="container">
+  			<div class="row space">
+    			<div class="col-md-3">
+			      <%= render "layouts/menu" %>
+			    </div>
+				<div class="col-md-9">
+					<% unless current_page?(pages_action_path) %>
+						<div class="card">
+	 						<div class="card-body">
+					  			<%= yield %>
+					  		</div>
+					  	</div>
+					<% else %>
+					  	<%= yield %>
+					<% end %>
+				</div>
+    		</div>
+		</div>
+		<script type="text/javascript">
+						$(function () {
+			  $('[data-toggle="tooltip"]').tooltip()
+			})
+		</script>
+  </body>
+</html>
+

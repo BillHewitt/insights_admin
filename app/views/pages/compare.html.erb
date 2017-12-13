@@ -1,0 +1,49 @@
+<%-# Header starts -%>
+<div class="row">
+	<div class="col-12">
+			<nav aria-label="breadcrumb" role="navigation">
+			  <ol class="breadcrumb">
+			  	<li class="breadcrumb-item"><%= link_to "Insights", pages_engagement_path %></li>
+			    <li class="breadcrumb-item active" aria-current="page">Compare All</li>
+			  </ol>
+			</nav>
+	</div>
+	<div class="col-12">
+	</div>
+</div>
+<%-# Header ends -%>
+
+<%-# Separator -%>
+
+<div class="row">
+	<div class="col-12">
+		<hr>
+	</div>
+</div>
+
+<%-# Stats -%>
+
+<div class="row">
+	<div class="col-12">
+		<div id="myDiv">		
+		</div>
+	</div>
+</div>
+
+
+<script>
+   var data = [
+  {
+    z: [[5, 5, 6, 5, 7, 7, 6, 8, 6, 4], [4, 6, 8, 8, 8, 7.3, 5, 4, 2, 5], [6, 6, 6, 5, 8, 4, 7, 8, 6, 6]],
+    x: ['The organisation, strategy & culture', 'Communication', 'My work', 'Management', 'Leadership', 'Opportunities', 'Reward & recognition', 'Training & development', 'Quality of life', 'Teamwork'],
+    y: ['Account Management', 'Product & Engineering', 'Marketing'],
+    type: 'heatmap'
+  }
+];
+
+Plotly.newPlot('myDiv', data);
+</script>
+
+
+
+

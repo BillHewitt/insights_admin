@@ -1,0 +1,31 @@
+<div class="list-group">
+   <% if current_page?(pages_engagement_path) or current_page?(pages_organisation_path) or current_page?(pages_opportunities_path) -%>
+      <%= link_to "Insights", pages_engagement_path, :class => "list-group-item list-group-item-action active" %>
+   <% else -%>
+      <%= link_to "Insights", pages_engagement_path, :class => "list-group-item list-group-item-action" %>
+   <% end -%>
+
+  <% if current_page?(pages_questions_path) -%>
+      <%= link_to "Questions", pages_questions_path, :class => "list-group-item list-group-item-action active" %>
+   <% else -%>
+      <%= link_to "Questions", pages_questions_path, :class => "list-group-item list-group-item-action" %>
+   <% end -%>
+
+  <% if current_page?(pages_action_path) -%>
+      <%= link_to "Action Board", pages_action_path, :class => "list-group-item list-group-item-action active" %>
+   <% else -%>
+      <%= link_to "Action Board", pages_action_path, :class => "list-group-item list-group-item-action" %>
+   <% end -%>
+
+  <% if current_page?(pages_users_path) or current_page?(pages_newuser_path) or current_page?(pages_teams_path) or current_page?(pages_newteam_path) -%>
+      <%= link_to "Users", pages_users_path, :class => "list-group-item list-group-item-action active" %>
+   <% else -%>
+      <%= link_to "Users", pages_users_path, :class => "list-group-item list-group-item-action" %>
+   <% end -%>
+
+  <% if current_page?(pages_settings_path) -%>
+      <%= link_to "Settings", pages_settings_path, :class => "list-group-item list-group-item-action active" %>
+   <% else -%>
+      <%= link_to "Settings", pages_settings_path, :class => "list-group-item list-group-item-action" %>
+   <% end -%>
+</div>

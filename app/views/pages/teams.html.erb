@@ -1,0 +1,136 @@
+<%-# Header starts -%>
+<div class="row">
+	<div class="col-6">
+		<nav aria-label="breadcrumb" role="navigation">
+		  <ol class="breadcrumb">
+		  	<li class="breadcrumb-item"><%= link_to "Users", pages_users_path %></li>
+		    <li class="breadcrumb-item active" aria-current="page">Teams <em class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="Use teams to split your people into their normal working groups"></em></li>
+		  </ol>
+		</nav>
+	</div>
+	<div class="col-6">
+		<div class="float-right">
+			<%= link_to pages_newteam_path do %>
+				<button type="button" class="btn btn-warning">Create new team</button>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+<%-# Separator -%>
+
+<div class="row">
+	<div class="col-12">
+		<hr>
+	</div>
+</div>
+
+<%-# Stats -%>
+
+<!-- Teams table -->
+<div class="row small-space">
+	<div class="col-12">
+		<table class="table table-bordered">
+		  <thead>
+		    <tr>
+		      <th scope="col">Team name <i class="fa fa-angle-down" aria-hidden="true"></i></th>
+		      <th scope="col">Parent</th>
+		      <th scope="col">Created</th>
+		      <th scope="col"></th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>Account Management</td>
+		      <td>Perkbox</td>
+		      <td>Dec 2017</td>
+		      <td>
+		      	<a href="#" class="trash" data-toggle="modal" data-target="#myModal1"><em class="fa fa-pencil"></em></a>
+		      	<a href="#" class="trash" data-toggle="modal" data-target="#myModal2"><em class="fa fa-trash"></em></a>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td>Marketing</td>
+		      <td>Perkbox</td>
+		      <td>Dec 2017</td>
+		      <td>
+		      	<a href="#" class="trash" data-toggle="modal" data-target="#myModal1"><em class="fa fa-pencil"></em></a>
+		      	<a href="#" class="trash" data-toggle="modal" data-target="#myModal2"><em class="fa fa-trash"></em></a>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td>Perkbox</td>
+		      <td>-</td>
+		      <td>Dec 2017</td>
+		      <td>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td>Product & Engineering</td>
+		      <td>Perkbox</td>
+		      <td>Dec 2017</td>
+		      <td>
+		      	<a href="#" class="trash" data-toggle="modal" data-target="#myModal1"><em class="fa fa-pencil"></em></a>
+		      	<a href="#" class="trash" data-toggle="modal" data-target="#myModal2"><em class="fa fa-trash"></em></a>
+		      </td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+</div>
+
+
+						<!-- Modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit team</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Team name</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="Team name">
+		  </div>
+		<div class="form-group">
+		    <label for="exampleSelect1">Parent team</label>
+		    <select class="form-control" id="exampleSelect1">
+		      <option>Perkbox</option>
+		      <option>Account Management</option>
+		      <option>Product & Engineering</option>
+		      <option>London</option>
+		      <option>Sheffield</option>
+		    </select>
+		  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Save</button>
+      </div>
+    </div>
+  </div>
+</div>	
+
+
+						<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete this team?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Delete team</button>
+      </div>
+    </div>
+  </div>
+</div>	
+
+
+

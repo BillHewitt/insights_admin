@@ -1,0 +1,273 @@
+<%-# Header starts -%>
+<div class="row">
+	<div class="col-12">
+		<div class="gap">
+			<nav aria-label="breadcrumb" role="navigation">
+			  <ol class="breadcrumb">
+			    <li class="breadcrumb-item active" aria-current="page">Settings</li>
+			  </ol>
+			</nav>
+		</div>
+	</div>
+</div>
+<%-# Header ends -%>
+
+<%-# Navbar -%>
+
+<ul class="nav nav-tabs settings" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Company</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Survey</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Emails</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="action-tab" data-toggle="tab" href="#action" role="tab" aria-controls="action" aria-selected="false">Action Board</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+  	<%-# Start Company Settings -%>
+  	<form class="form" action="#">
+		<div class="form-group row">
+			<label class="col-md-3 col-form-label">Company Name</label>
+			<div class="col-md-9">
+				<input type="text" name="regular" class="form-control" value="Perkbox">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-3 col-form-label">Industry</label>
+			<div class="col-md-9">
+				<select class="custom-select form-control">
+					<option selected="">Industry 1</option>
+					<option value="1">Industry 2</option>
+					<option value="2">Industry 3</option>
+					<option value="3">Industry 4</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-3 col-form-label">Company size</label>
+			<div class="col-md-9">
+				<select class="custom-select form-control">
+					<option selected="">0 - 20</option>
+					<option value="1">20 - 50</option>
+					<option value="2">50 - 250</option>
+					<option value="3">250 - 500</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-3 col-form-label">Time zone</label>
+			<div class="col-md-9">
+				<select class="custom-select form-control">
+					<option selected="">UK GMT</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-3 col-form-label">Upload Logo</label>
+			<div class="col-md-9">
+				<input type="file" name="regular" class="form-control" placeholder="Perkbox">
+			</div>
+		</div>
+
+		<div class="row">
+		
+	</div>
+</form>
+<section class="row">
+			<div class="col-md-6">
+			</div>
+			<div class="col-md-6">
+				<div class="float-right">
+					<button type="button" class="btn btn-md btn-warning">Save</button>
+				</div>
+			</div>
+		</section>
+  </div>
+
+  <%-# Start Survey settings -%>
+
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+  	<form class="form" action="#">
+		<div class="row form">
+			<label class="col-md-3 col-form-label">Set survey frequency</label>
+				<div class="col-lg-6">
+					<label class="custom-control custom-radio active">
+						<input id="radio1" name="radio" type="radio" class="custom-control-input" checked=""><span class="custom-control-indicator"></span>
+						  <span class="custom-control-description">Every week <em class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="Send 5 short questions every week. Great for having an up-to-date view of your organisation"></em></span></label>
+					<br>
+					<label class="custom-control custom-radio">
+						<input id="radio2" name="radio" type="radio" class="custom-control-input"><span class="custom-control-indicator"></span>
+						  <span class="custom-control-description">Every month <em class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="Send 10 questions every month"></em></span></label>
+				</div>
+			</div>
+		<div class="form-group row">
+			<label class="col-md-3 col-form-label">Survey delivery</label>
+			<div class="col-md-9">
+				<select class="custom-select form-control">
+					<option selected="">Every Monday @ 2pm</option>
+					<option value="1">Every Tuesday @ 2pm</option>
+					<option value="2">Every Wednesday @ 2pm</option>
+					<option value="3">Every Thursday @ 2pm</option>
+					<option value="3">Every Friday @ 2pm</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-3 col-form-label">Send reminder email <em class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="We'll automatically follow up with people that haven't completed the survey for you via email."></em></label>
+			<div class="col-md-9">
+				<select class="custom-select form-control">
+					<option selected="">Send no reminder</option>
+					<option selected="">After 1 day</option>
+					<option value="1">After 3 days</option>
+				</select>
+				<div class="spaceme">
+					<a href ="">Set reminder email</a>
+				</div>
+			</div>
+		</div>
+		<section class="row">
+			<div class="col-md-6">
+			</div>
+			<div class="col-md-6">
+				<div class="float-right">
+					<button type="button" class="btn btn-md btn-warning">Save</button>
+				</div>
+			</div>
+		</section>
+
+		<div class="row">
+	</div>
+</form>
+
+  </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+  	<div class="form-group row">
+			<label class="col-md-3 col-form-label">Default email address <em class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="This is the email address that all surveys and messages will be delivered from. We recommend you personalise this to ensure maximum response rate."></em></label>
+			<div class="col-md-9">
+				<input type="text" name="regular" class="form-control" value="shaun@perkbox.co.uk">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-3 col-form-label">Default email name <em class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="This is the name that will appear with all messages and surveys. We recommend you personalise this to ensure maximum response rate."></em></label>
+			<div class="col-md-9">
+				<input type="text" name="regular" class="form-control" value="Shaun Bradley">
+			</div>
+		</div>
+  	<form class="form" action="#">
+											<div class="form-group row">
+												<label class="col-md-3 col-form-label">Welcome email <em class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="This is the first email people will receive when they're invited to Perkbox Insights and receive their first survey."></em></label>
+												<div class="col-md-9">
+													<div class="form-group">
+													    <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Hello and welcome to Perkbox Insights. We're using this tool as a way to give you a voice and to make sure we're helping to create a work environment everyone's proud to be part of. You'll get a short, weekly email sent straight to your inbox. We'd really appreciate if you take the time to fill it out for us :)."></textarea>
+													  </div>
+													  <a class="ul-link js-add-user-box" href="#" data-toggle="modal" data-target="#myModal">Send test email</a>
+												</div>
+											</div>
+											<div class="form-group row">
+												<label class="col-md-3 col-form-label">Survey email <em class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="This is the email that will be sent out each week to your company."></em></label>
+												<div class="col-md-9">
+													<div class="form-group">
+													    <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Tick tock, it's survey o'clock. You know what to do :)"></textarea>
+													  </div>
+													  <a class="ul-link js-add-user-box" href="#" data-toggle="modal" data-target="#myModal">Send test email</a>
+												</div>
+											</div>
+											<div class="form-group row">
+												<label class="col-md-3 col-form-label">Reminder email <em class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="This is the email that will be automatically sent to people if they haven't completed their survey in a timely fashion."></em></label>
+												<div class="col-md-9">
+													<div class="form-group">
+													    <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Hey, we've noted you've not yet filled in your survey. Take 2?"></textarea>
+													  </div>
+													  <a class="ul-link js-add-user-box" href="#" data-toggle="modal" data-target="#myModal">Send test email</a>
+												</div>
+											</div>
+										<section class="row">
+											<div class="col-md-6">
+											</div>
+											<div class="col-md-6">
+												<div class="float-right">
+													<button type="button" class="btn btn-md btn-warning">Save</button>
+												</div>
+											</div>
+										</section>
+									</form>
+								</div>
+
+					  <div class="tab-pane fade" id="action" role="tabpanel" aria-labelledby="action-tab">
+					  	<%-# Start Company Settings -%>
+					  	
+							<form class="form" action="#">
+								<div class="form-group row">
+									<label class="col-md-3 col-form-label">Action Board title</label>
+									<div class="col-md-9">
+										<input type="text" name="regular" class="form-control" value="The Perkbox Action Board">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-md-3 col-form-label">Action Board sub-title</label>
+									<div class="col-md-9">
+										<input type="text" name="regular" class="form-control" value="Turning everyone's feedback into everyone's actions">
+									</div>
+								</div>
+								<div class="row">
+											<label class="col-md-3 col-form-label">Display action board after each survey</label>
+											<div class="col-lg-6">
+												<label class="custom-control custom-radio">
+													<input id="radio1" name="radio" type="radio" class="custom-control-input" checked=""><span class="custom-control-indicator"></span>
+													  <span class="custom-control-description">Display <em class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="This will display the action board at the end of each survey that someone completes. Great for closing the loop between their feedback and tangible actions."></em></span></label>
+												<br>
+												<label class="custom-control custom-radio">
+													<input id="radio2" name="radio" type="radio" class="custom-control-input"><span class="custom-control-indicator"></span>
+													  <span class="custom-control-description">Hide <em class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="This will prevent the action board being shown at the end of each survey. Don't worry, you can still publish an action board and circulate the link via email."></em></span></label>
+											</div>
+										</div>
+								<section class="row">
+											<div class="col-md-6">
+											</div>
+											<div class="col-md-6">
+												<div class="float-right">
+													<button type="button" class="btn btn-md btn-warning">Save</button>
+												</div>
+											</div>
+										</section>
+										  
+
+									  </div>
+									</div>
+								</form>
+
+						<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Send test email</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Email address</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address">
+		  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Send test email</button>
+      </div>
+    </div>
+  </div>
+</div>	
+
+
+
+
+
+
