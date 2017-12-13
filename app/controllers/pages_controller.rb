@@ -38,4 +38,10 @@ class PagesController < ApplicationController
   def organisation
   end
 
+  def opportunities
+  end
+
+  def reward
+  end
+
 end

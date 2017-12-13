@@ -1,0 +1,269 @@
+<%-# Header starts -%>
+<div class="row">
+	<div class="col-12">
+		<div class="gap">
+			<nav aria-label="breadcrumb" role="navigation">
+			  <ol class="breadcrumb">
+			  	<li class="breadcrumb-item"><%= link_to "Insights", pages_engagement_path %></li>
+			    <li class="breadcrumb-item active" aria-current="page">Reward & recognition</li>
+			  </ol>
+			</nav>
+		</div>
+	</div>
+	<div class="col-12">
+		<div class="float-left">
+			<div class="dropdown">
+				<button class="btn btn-light dropdown-toggle small" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    Whole Company
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="#">Account Management</a>
+					<a class="dropdown-item" href="#">Product & Engineering</a>
+					<a class="dropdown-item" href="#">London</a>
+					<a class="dropdown-item" href="#">Sheffield</a>
+				</div>
+			</div>
+		</div>
+		<div class="float-right">
+			<%= link_to pages_compare_path do %>
+				<button type="button" class="btn btn-light ">Compare all teams</button>
+			<% end %>
+			<button type="button" class="btn btn-warning ">Download Report</button>
+		</div>
+	</div>
+</div>
+<%-# Header ends -%>
+
+<%-# Separator -%>
+
+<div class="row">
+	<div class="col-12">
+		<hr>
+	</div>
+</div>
+
+<%-# Gauge Starts -%>
+
+<div class="row">
+	<div class="col-5">
+		
+		<div id="gauge" style="width:330px; height:260px"></div>
+	</div>
+	<div class="col-7">
+		<div class="space">
+			<h2 class="space">7/10 is a good score <em class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="This score is calculated as a cumulative moving average of all the organisaiton, strategy and culture questions."></em></h2>
+			<p>Here's what it means:</p>
+			<div class="collapse" id="viewdetails">
+				<ul>
+						<li>Most people feel their salary and benefits package meet my needs well</li>
+						<li>Some staff feel they're rewarded for exceeding their goals</li>
+						<li>Most people feel Perkbox focuses on promoting the people best equipped to meet the future needs of the company</li>
+					</ul>
+				<div class="spacea">
+					<a href "#" data-toggle="modal" data-target="#myModal1">See a breakdown of the question responses</a>
+				</div>
+
+			</div>
+          
+          	<a href="#" data-toggle="collapse" data-target="#viewdetails">View details <em class="fa fa-chevron-down"></em></a>
+		</div>
+	</div>
+</div>
+
+<%-# Graph starts -%>
+<div class="row">
+	<div class="col-12">
+		<canvas id="line-chart" width="800" height="250"></canvas>
+	</div>
+</div>
+
+
+
+<%-# Our Recommendations -%>
+<div class="row space">
+	<div class="col-12">
+		<h2>Our Recommendations</h2>
+		<div class="row less">
+			<div class="col-12">
+				<table class="table">
+				  <tbody>
+				    <tr>
+				      <td>Create weekly competitions <em class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="Here's a short description of how it works and what's involved in executing this action item..."></em></td>
+				    </tr>
+				    <tr>
+				      <td>Company recognition program <em class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="Here's a short description of how it works and what's involved in executing this action item..."></em></td>
+				    </tr>
+				    <tr>
+				      <td>Create monthly reward budget <em class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="Here's a short description of how it works and what's involved in executing this action item..."></em></td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%-# What's being said -%>
+<div class="row">
+	<div class="col-12">
+		<h2>What's being said</h2>
+		<div class="row less">
+			<div class="col-12">
+				<table class="table">
+				  <tbody>
+				    <tr>
+				      <td>"I love that we get a beer trolley and how chilled it is"</td>
+				      <td>Nov 2017</td>
+				    </tr>
+				    <tr>
+				      <td>"Perkbox is like no other company I've worked at"</td>
+				      <td>Nov 2017</td>
+				    </tr>
+				    <tr>
+				      <td>"I wish things were a little more formal and we had to wear suits"</td>
+				      <td>Nov 2017</td>
+				    </tr>
+				  </tbody>
+				</table>
+				<a href="#" class="">Show all <em class="fa fa-chevron-down"></em></a>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+  
+
+
+<script type="text/javascript">
+
+$(function() {
+   $('#easypiechart-4').easyPieChart({
+       scaleColor: false,
+       barColor: '#00adee'
+   });
+});
+</script>
+
+<script type="text/javascript">
+  var g = new JustGage({
+    id: "gauge",
+    value: 7,
+    min: 0,
+    max: 10,
+    gaugeWidthScale: 0.6,
+    customSectors: [{
+          	color: '#00ADEE',
+            lo: 0,
+            hi: 33
+          },
+          {
+          	color: '#00ADEE',
+            lo: 33,
+            hi: 66
+          },{
+          	color: '#00ADEE',
+            lo: 66,
+            hi: 100
+          }]
+  });
+</script>
+
+<script>
+new Chart(document.getElementById("line-chart"), {
+  type: 'line',
+  data: {
+    labels: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov"],
+    datasets: [{ 
+        data: [6.2,7.4,6.8,7.4,6.8,8.0,8.2,7.9,8.0,7.1,7.0],
+        label: "Organisation",
+        borderColor: "#00adee",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    legend: {
+    		display: false,
+            position: 'bottom',
+            labels: {
+                fontFamily: 'Lato',
+                fontSize: 14,
+            }
+        },
+    scales : {
+        xAxes : [ {
+            gridLines : {
+                display : true,
+            }
+        } ],
+        yAxes : [ {
+            gridLines : {
+                display : true,
+            }
+        } ]
+    }
+
+  },
+
+
+});
+</script>
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Question Responses</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-responsive">
+				  <thead>
+				    <tr>
+				      <th scope="col">Question</th>
+				      <th scope="col">Responses</th>
+				      <th scope="col">Response rate %</th>
+				      <th scope="col">Score/10</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>My salary and benefits package meet my needs well</td>
+				      <td>145</td>
+				      <td>67</td>
+				      <td class="text-danger">3</td>
+				    </tr>
+				    <tr>
+				      <td>I am paid fairly for the contributions I make to Perkbox's success</td>
+				      <td>97</td>
+				      <td>56</td>
+				      <td class="text-danger">5</td>
+				    </tr>
+				    <tr>
+				      <td>I am rewarded for exceeding my goals</td>
+				      <td>50</td>
+				      <td>20</td>
+				      <td class="text-danger">4</td>
+				    </tr>
+				    <tr>
+				      <td>I receive appropriate recognition (beyond my pay) for my contributions and accomplishments</td>
+				      <td>145</td>
+				      <td>67</td>
+				      <td class="text-success">7</td>
+				    </tr>
+				    <tr>
+				      <td>I feel I am adequately paid compared to my colleagues at other organisations</td>
+				      <td>195</td>
+				      <td>87</td>
+				      <td class="text-success">9</td>
+				    </tr>
+				  </tbody>
+				</table>
+      </div>
+    </div>
+  </div>
+</div>	
+
