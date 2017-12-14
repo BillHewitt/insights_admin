@@ -17,6 +17,12 @@
       <%= link_to "Action Board", pages_action_path, :class => "list-group-item list-group-item-action" %>
    <% end -%>
 
+   <% if current_page?(pages_stats_path) -%>
+      <%= link_to "Participation Stats", pages_stats_path, :class => "list-group-item list-group-item-action active" %>
+   <% else -%>
+      <%= link_to "Participation Stats", pages_stats_path, :class => "list-group-item list-group-item-action" %>
+   <% end -%>
+
   <% if current_page?(pages_users_path) or current_page?(pages_newuser_path) or current_page?(pages_teams_path) or current_page?(pages_newteam_path) -%>
       <%= link_to "Users", pages_users_path, :class => "list-group-item list-group-item-action active" %>
    <% else -%>
