@@ -5,16 +5,16 @@
       <%= link_to "Insights", pages_engagement_path, :class => "list-group-item list-group-item-action" %>
    <% end -%>
 
-  <% if current_page?(pages_questions_path) -%>
-      <%= link_to "Questions", pages_questions_path, :class => "list-group-item list-group-item-action active" %>
-   <% else -%>
-      <%= link_to "Questions", pages_questions_path, :class => "list-group-item list-group-item-action" %>
-   <% end -%>
-
   <% if current_page?(pages_action_path) -%>
       <%= link_to "Action Board", pages_action_path, :class => "list-group-item list-group-item-action active" %>
    <% else -%>
       <%= link_to "Action Board", pages_action_path, :class => "list-group-item list-group-item-action" %>
+   <% end -%>
+
+   <% if current_page?(pages_questions_path) -%>
+      <%= link_to "Questions", pages_questions_path, :class => "list-group-item list-group-item-action active" %>
+   <% else -%>
+      <%= link_to "Questions", pages_questions_path, :class => "list-group-item list-group-item-action" %>
    <% end -%>
 
    <% if current_page?(pages_stats_path) -%>
