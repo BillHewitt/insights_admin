@@ -321,3 +321,11 @@ div.row.less {
 div.spacea {
 	padding-bottom: 15px;
 }
+
+
+.dropdown-item:active, {
+    background-color: #00ADEE !important;
+    color: #FFFFFF;
+    outline: 0 none;
+    text-decoration: none;
+}
