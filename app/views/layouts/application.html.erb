@@ -18,25 +18,27 @@
   </head>
 
   <body>
-  	<%= render "layouts/nav" %>
-  		<div class="container">
-  			<div class="row space">
-    			<div class="col-md-3">
-			      <%= render "layouts/menu" %>
-			    </div>
-				<div class="col-md-9">
-					<% unless current_page?(pages_action_path) %>
-						<div class="card">
-	 						<div class="card-body">
-					  			<%= yield %>
-					  		</div>
-					  	</div>
-					<% else %>
-					  	<%= yield %>
-					<% end %>
-				</div>
-    		</div>
-		</div>
+    <div class="color">
+    	<%= render "layouts/nav" %>
+    		<div class="container">
+    			<div class="row space">
+      			<div class="col-md-3">
+  			      <%= render "layouts/menu" %>
+  			    </div>
+  				<div class="col-md-9">
+  					<% unless current_page?(pages_action_path) %>
+  						<div class="card">
+  	 						<div class="card-body">
+  					  			<%= yield %>
+  					  		</div>
+  					  	</div>
+  					<% else %>
+  					  	<%= yield %>
+  					<% end %>
+  				</div>
+      		</div>
+  		</div>
+    </div>
 		<script type="text/javascript">
 						$(function () {
 			  $('[data-toggle="tooltip"]').tooltip()
