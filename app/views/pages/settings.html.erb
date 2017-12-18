@@ -1,12 +1,17 @@
 <%-# Header starts -%>
 <div class="row">
-	<div class="col-12">
+	<div class="col-6">
 		<div class="gap">
 			<nav aria-label="breadcrumb" role="navigation">
 			  <ol class="breadcrumb">
 			    <li class="breadcrumb-item active" aria-current="page">Settings</li>
 			  </ol>
 			</nav>
+		</div>
+	</div>
+	<div class="col-6">
+		<div class="float-right">
+				<button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal9">Send test survey</button>
 		</div>
 	</div>
 </div>
@@ -278,6 +283,31 @@
     </div>
   </div>
 </div>	
+
+<div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Send test survey</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Email address</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address">
+		  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Send test survey</button>
+      </div>
+    </div>
+  </div>
+</div>	
+
+
 
 
 
